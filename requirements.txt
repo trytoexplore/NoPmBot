@@ -3,5 +3,5 @@ python-dotenv
 psycopg2-binary
 python-telegram-bot==13.9
 TgCrypto
-SQLAlchemy==1.4.28
+sqlalchemy==1.3.20
 asyncio
