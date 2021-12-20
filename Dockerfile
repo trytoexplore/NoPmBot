@@ -6,6 +6,8 @@ COPY . .
 
 ENV PIP_NO_CACHE_DIR 1
 
+ENV LANG C.UTF-8
+
 RUN pip install --upgrade pip
 
 RUN pip3 install --no-cache-dir -r requirements.txt
