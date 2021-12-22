@@ -44,7 +44,8 @@ async def num_start_message(client: Bot, message: Message):
     uszkhvis_chats_ahndler([OWNER_ID])
 )
 async def nimda_start_message(_, message: Message):
-    await message.reply_text(
+    await message.reply_photo(
+        START_IMG,
         START_TEXT,
         quote=True,
         reply_markup=InlineKeyboardMarkup(
