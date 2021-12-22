@@ -26,6 +26,7 @@ START_TEXT = f"""
 """
 
 button = InlineKeyboard(row_width=1)
+button.add(InlineKeyboardButton(text="test", url=www.google.com))
 
 @Bot.on_message(
     filters.command(START_COMMAND, COMMM_AND_PRE_FIX) &
@@ -46,5 +47,5 @@ async def nimda_start_message(_, message: Message):
     await message.reply_text(
         START_TEXT,
         quote=True,
-        button.add(InlineKeyboardButton(text="test", url=www.google.com))
+        reply_markup=button
     )
