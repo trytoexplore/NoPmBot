@@ -27,7 +27,7 @@ START_TEXT = f"""
 """
 
 button = InlineKeyboard(row_width=1)
-button.add(InlineKeyboardButton(text="Repo", url="https://github.com/AASFCYBERKING/NoPmBot"))
+button.add(InlineKeyboardButton(text="Repo", url="https://github.com/AASFCYBERKING/NoPmBot"), InlineKeyboardButton(text="Owner", url="tg://user?id={OWNER_ID}"))
 
 @Bot.on_message(
     filters.command(START_COMMAND, COMMM_AND_PRE_FIX) &
