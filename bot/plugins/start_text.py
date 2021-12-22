@@ -16,8 +16,6 @@ from bot.bot import Bot
 from bot.hf.flifi import uszkhvis_chats_ahndler
 from pykeyboard import InlineKeyboard
 from pyrogram.types import ChatPermissions, InlineKeyboardButton, InlineKeyboardMarkup
-from telegram import (InlineKeyboardButton, InlineKeyboardMarkup, ParseMode,
-                      Update)
 
 # wants to add your own text read this https://core.telegram.org/bots/api#html-style 
 START_TEXT = f"""
@@ -27,6 +25,9 @@ START_TEXT = f"""
 <b>➖➖➖➖➖➖➖➖➖➖➖➖➖</b>
 <code>My Repo Is Public</code> <a href="https://github.com/AASFCYBERKING/NoPmBot">Here</a>
 """
+
+button = InlineKeyboard(row_width=1)
+button.add(InlineKeyboardButton(text="Repo", url="https://github.com/AASFCYBERKING/NoPmBot"), InlineKeyboardButton(text="Owner", url="tg://user?id={OWNER_ID}"))
 
 @Bot.on_message(
     filters.command(START_COMMAND, COMMM_AND_PRE_FIX) &
@@ -44,20 +45,8 @@ async def num_start_message(client: Bot, message: Message):
     uszkhvis_chats_ahndler([OWNER_ID])
 )
 async def nimda_start_message(_, message: Message):
-    await message.reply_photo(
-        START_IMG,
+    await message.reply_text(
         START_TEXT,
         quote=True,
-        reply_markup=InlineKeyboardMarkup(
-            [
-              [                  
-                   InlineKeyboardButton(
-                         text="Support🚑",
-                         url=f"https://t.me/MikusSupport"),
-                   InlineKeyboardButton(
-                         text="Updates🛰️",
-                         url="https://t.me/CrowdXStrike")
-                 ] 
-            ]
-        ),
-    ) 
+        reply_markup=button
+    )
