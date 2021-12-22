@@ -14,6 +14,7 @@ from bot import (
 )
 from bot.bot import Bot 
 from bot.hf.flifi import uszkhvis_chats_ahndler
+from pyrogram.types import ChatPermissions, InlineKeyboardButton, InlineKeyboardMarkup
 
 # wants to add your own text read this https://core.telegram.org/bots/api#html-style 
 START_TEXT = f"""
@@ -42,5 +43,22 @@ async def num_start_message(client: Bot, message: Message):
 async def nimda_start_message(_, message: Message):
     await message.reply_text(
         START_TEXT,
-        quote=True
+        quote=True,
+        reply_markup=InlineKeyboardMarkup(
+                            [
+                                [
+                                    InlineKeyboardButton(
+                                        "Repo",
+                                        url="https://t.me/AASFCYBERKING",
+                                    )
+                                ],
+                                [
+                                    InlineKeyboardButton(
+                                        "Owner",
+                                        url="https://t.me/AASFCYBERKING",
+                                    )
+                                ],
+                            ]
+                        ),
+                    )
     )
