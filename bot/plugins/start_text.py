@@ -25,6 +25,8 @@ START_TEXT = f"""
 <code>My Repo Is Public</code> <a href="https://github.com/AASFCYBERKING/NoPmBot">Here</a>
 """
 
+button = InlineKeyboard(row_width=1)
+
 @Bot.on_message(
     filters.command(START_COMMAND, COMMM_AND_PRE_FIX) &
     ~uszkhvis_chats_ahndler([OWNER_ID])
