@@ -44,21 +44,5 @@ async def nimda_start_message(_, message: Message):
     await message.reply_text(
         START_TEXT,
         quote=True,
-        reply_markup=InlineKeyboardMarkup(
-                            [
-                                [
-                                    InlineKeyboardButton(
-                                        "Repo",
-                                        url="https://t.me/AASFCYBERKING",
-                                    )
-                                ],
-                                [
-                                    InlineKeyboardButton(
-                                        "Owner",
-                                        url="https://t.me/AASFCYBERKING",
-                                    )
-                                ],
-                            ]
-                        ),
-                    )
+        button.add(InlineKeyboardButton(text="test", url=www.google.com))
     )
