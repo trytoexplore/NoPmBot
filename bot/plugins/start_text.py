@@ -14,6 +14,7 @@ from bot import (
 )
 from bot.bot import Bot 
 from bot.hf.flifi import uszkhvis_chats_ahndler
+from pykeyboard import InlineKeyboard
 from pyrogram.types import ChatPermissions, InlineKeyboardButton, InlineKeyboardMarkup
 
 # wants to add your own text read this https://core.telegram.org/bots/api#html-style 
