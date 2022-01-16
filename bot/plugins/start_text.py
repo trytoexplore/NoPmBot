@@ -20,14 +20,20 @@ from pyrogram.types import ChatPermissions, InlineKeyboardButton, InlineKeyboard
 # wants to add your own text read this https://core.telegram.org/bots/api#html-style 
 START_TEXT = f"""
 ──「 <a href="{START_IMG}">{NAME}</a> 」──
-<b>Hey Master! ,</b>
-<b>I Am Working Properly With Awesome Speed</b>
+<b>Hey {message.from_user.first_name}! ,</b>
+<b>This is our official help bot
+
+If you have any difficulties in deploying bot or our bots not working. You can message the problem with photo. Once Developer see's your message he will solve your problem
+
+Thanks for using our bot
+
+This bot was made by @LG_Bot_Updates</b>
 <b>➖➖➖➖➖➖➖➖➖➖➖➖➖</b>
-<code>My Repo Is Public</code> <a href="https://github.com/AASFCYBERKING/NoPmBot">Here</a>
+<code>My Dev</code> <a href="https://t.me/LG_Bot_Updates"></a>
 """
 
 button = InlineKeyboard(row_width=1)
-button.add(InlineKeyboardButton(text="Repo", url="https://github.com/AASFCYBERKING/NoPmBot"), InlineKeyboardButton(text="Owner", url=f"tg://user?id={OWNER_ID}"))
+button.add(InlineKeyboardButton(text="Support Channel", url="https://t.me/LG_Bot_Updates"), InlineKeyboardButton(text="Support Group", url=f"tg://user?id={OWNER_ID}"))
 
 @Bot.on_message(
     filters.command(START_COMMAND, COMMM_AND_PRE_FIX) &
