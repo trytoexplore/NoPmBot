@@ -18,14 +18,19 @@ from bot import (
 
 
 START_TEXT = f"""
-<b>Whassup Buddy !
-Thx For Using Me </b><a href="{PM_IMG}">🙏</a>
+<b>Hey {message.from_user.first_name}! ,</b>
 
-<b>You Can Contact My</b> <a href="tg://user?id={OWNER_ID}">Owner</a> <b>By Me</b>
+<b>This is our official help bot
 
-<a href="https://github.com/AASFCYBERKING/NoPmBot">My Repo Was Public Click Here 🌹</a>
+If you have any difficulties in deploying bot or our bots not working. You can message the problem with photo. Once Developer see's your message he will solve your problem
 
-<b>The Legend Who Created Me Is </b>@Aasfcyberking 🖤
+Thanks for using our bot
+
+This bot was made by @LG_Bot_Updates</b>
+
+<b>➖➖➖➖➖➖➖➖➖➖➖➖➖</b>
+
+<code>My Dev</code> <a href="https://t.me/LG_Bot_Updates"></a>
 """
 
 class Bot(Client):
