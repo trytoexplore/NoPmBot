@@ -1,6 +1,6 @@
 {
   "name": "No PM Bot",
-  "description": "Modular  Telegram Bot powered by @PyroGram Upgraded By @Aasfcyberking",
+  "description": "Modular  Telegram Bot powered by @PyroGram Upgraded By LG_Bot_Updates",
   "logo": "https://telegra.ph/file/4062708e65d103dd712d7.jpg",
   "keywords": [
     "telegram",
@@ -11,7 +11,7 @@
     "channel",
     "pyrogram"
   ],
-  "repository": "https://github.com/AASFCYBERKING/NoPMBot",
+  "repository": "https://github.com/trytoexplore/NoPmBot",
   "website": "https://telegram.dog/AASFCYBERKING",
   "env": {
     "APP_ID": {
